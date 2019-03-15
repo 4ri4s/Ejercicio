@@ -1,0 +1,18 @@
+<title>{{title}}</title>
+<!-- <input type="number" placeholder="Tu id" [(ngModel)]="NidJugador"/> -->
+<input type="text" placeholder="Tu nombre" [(ngModel)]="Nnombre"/>
+<input type="number" placeholder="Tus puntos" [(ngModel)]="Npuntos"/>
+<input type="button" (click)="crearJugador()" value="Enviar" />
+<table class="table" >
+  <tr>
+    <th>Id</th>
+    <th>Nombres</th>
+    <th>Puntos</th>
+    <th>Acciones</th>
+  </tr>
+  <tr *ngFor="let jugador of jugadores">
+    <td> {{jugador.idJugador}} </td>
+    <td> {{jugador.nombre}} </td>
+    <td> {{jugador.puntos}} </td>
+  </tr>
+</table>
